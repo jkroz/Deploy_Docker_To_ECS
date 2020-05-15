@@ -10,7 +10,7 @@ RUN apt-get update \
 
 
 ADD default-nginx /etc/nginx/sites-available/default
-ADD hello-world /var/www/html
+ADD hello-world.html /var/www/html/index.html
 
 
 EXPOSE 80
