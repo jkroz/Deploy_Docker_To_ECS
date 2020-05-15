@@ -39,10 +39,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Replace Secrets to Task Definition
-        run: |
+      run: |
           sed -i "s/<aws_ecr>/$AWS_ECR/g" task-definition.json 
           sed -i "s/<aws_execution_role_arn>/$AWS_EXECUTION_ROLE_ARN/g" task-definition.json 
-        env:
+      env:
           AWS_ECR: ${{ secrets.AWS_ECR }}
           AWS_EXECUTION_ROLE_ARN: ${{ secrets.AWS_EXECUTION_ROLE_ARN }}
           
