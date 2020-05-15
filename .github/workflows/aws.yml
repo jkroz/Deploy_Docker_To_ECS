@@ -38,7 +38,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Replace Secrets to Task Definition
+    #- name: Replace Secrets to Task Definition
     - shell: bash  
       env:
           AWS_ECR: ${{ secrets.AWS_ECR }}
