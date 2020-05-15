@@ -40,8 +40,9 @@ jobs:
 
     - name: Replace Secrets to Task Definition
       run: |
-          sed -i 's/aws_ecr_repo/$AWS_ECR/g' task-definition.json 
-          sed -i 's/aws_execution_role_arn/$AWS_EXECUTION_ROLE_ARN/g' task-definition.json 
+          sed -i 's/aws_ecr_repo/$AWS_ECR/g' task-definition.json
+          sed -i 's/aws_execution_role_arn/$AWS_EXECUTION_ROLE_ARN/g' task-definition.json
+          cat task-definition.json
       env:
           AWS_ECR: ${{ secrets.AWS_ECR }}
           AWS_EXECUTION_ROLE_ARN: ${{ secrets.AWS_EXECUTION_ROLE_ARN }}
