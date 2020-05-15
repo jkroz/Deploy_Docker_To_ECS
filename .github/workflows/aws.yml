@@ -76,5 +76,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: svc-td1
-        cluster: default
+        cluster: ecscluster
         wait-for-service-stability: true
