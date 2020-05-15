@@ -6,10 +6,12 @@ RUN apt-get update \
     && apt-get install -y nginx \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && echo "daemon off;" >> /etc/nginx/nginx.conf \
-    && echo "hello Monde" > /var/www/html
+    && echo "daemon off;" >> /etc/nginx/nginx.conf
+
 
 ADD default-nginx /etc/nginx/sites-available/default
+ADD hello-world /var/www/html
+
 
 EXPOSE 80
 CMD ["nginx"]
