@@ -25,7 +25,7 @@
     "executionRoleArn": AWS_EXECUTION_ROLE_ARN,
     "family": "td1",
     "taskRoleArn": "",
-    "placementConstraints": []
+    "placementConstraints": [],
      "environment": [
         {
           "name": "AWS_ECR",
