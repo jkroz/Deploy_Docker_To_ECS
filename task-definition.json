@@ -6,7 +6,7 @@
     "containerDefinitions": [
         {
             "name": "container1",
-            "image": "aws_ecr_repo",
+            "image": AWS_ECR,
             "resourceRequirements": null,
             "essential": true,
             "portMappings": [
@@ -22,8 +22,18 @@
     "networkMode": "awsvpc",
     "memory": "512",
     "cpu": "256",
-    "executionRoleArn": "aws_execution_role_arn",
+    "executionRoleArn": AWS_EXECUTION_ROLE_ARN,
     "family": "td1",
     "taskRoleArn": "",
     "placementConstraints": []
+     "environment": [
+        {
+          "name": "AWS_ECR",
+          "value": "aws_ecr_repo"
+        },
+        {
+          "name": "AWS_EXECUTION_ROLE_ARN",
+          "value": "aws_execution_role_arn"
+        }
+    ]
 }
