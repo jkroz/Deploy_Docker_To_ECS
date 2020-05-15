@@ -6,7 +6,7 @@
     "containerDefinitions": [
         {
             "name": "container1",
-            "image": "<aws_ecr_repo>",
+            "image": "aws_ecr_repo",
             "resourceRequirements": null,
             "essential": true,
             "portMappings": [
@@ -22,7 +22,7 @@
     "networkMode": "awsvpc",
     "memory": "512",
     "cpu": "256",
-    "executionRoleArn": "<aws_execution_role_arn>",
+    "executionRoleArn": "aws_execution_role_arn",
     "family": "td1",
     "taskRoleArn": "",
     "placementConstraints": []
